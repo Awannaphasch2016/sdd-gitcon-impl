@@ -45,6 +45,8 @@ Publish four English pages for GIT 2025 (Home, Program, Registration Fee, Contac
 
 No violations. Complexity tracking is empty.
 
+Post-design re-check: fixtures stay as files under `data/`, messages stay as JSON lines in that directory, and the image still has no runtime network or external service. The gate still passes.
+
 ## Project Structure
 
 ### Documentation (this feature)
