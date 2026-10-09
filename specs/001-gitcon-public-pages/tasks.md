@@ -23,9 +23,9 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create `.gitignore` and `.dockerignore` with PHP, log, editor, and runtime submission patterns
-- [ ] T002 [P] Write `data/program.json` and `data/fees.json` byte-for-byte from SPEC.md section 6
-- [ ] T003 [P] Add root `Dockerfile` using `php:8.2-apache`, document root `public/`, port 80, and no runtime network commands
+- [x] T001 Create `.gitignore` and `.dockerignore` with PHP, log, editor, and runtime submission patterns
+- [x] T002 [P] Write `data/program.json` and `data/fees.json` byte-for-byte from SPEC.md section 6
+- [x] T003 [P] Add root `Dockerfile` using `php:8.2-apache`, document root `public/`, port 80, and no runtime network commands
 
 ---
 
@@ -35,10 +35,10 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Implement shared layout, escaping, and the request path helper in `src/bootstrap.php` (header link "GIT 2025", navigation Home `/`, Program `/program`, Registration Fee `/registration-fee`, Contact `/contact`, footer organiser, address, phone, fax, mailto, copyright, one `<main>`, one `<h1>`)
-- [ ] T005 [P] Implement per-request reads of `data/program.json` and `data/fees.json` in `src/records.php`
-- [ ] T006 Implement method and path dispatch in `public/index.php`, including trailing-slash equivalence and returning false for real files under `public/assets/`
-- [ ] T007 [P] Add vanilla CSS in `public/assets/site.css` using a system font stack so the four navigation links stay visible at 375 px without horizontal page scrolling
+- [x] T004 Implement shared layout, escaping, and the request path helper in `src/bootstrap.php` (header link "GIT 2025", navigation Home `/`, Program `/program`, Registration Fee `/registration-fee`, Contact `/contact`, footer organiser, address, phone, fax, mailto, copyright, one `<main>`, one `<h1>`)
+- [x] T005 [P] Implement per-request reads of `data/program.json` and `data/fees.json` in `src/records.php`
+- [x] T006 Implement method and path dispatch in `public/index.php`, including trailing-slash equivalence and returning false for real files under `public/assets/`
+- [x] T007 [P] Add vanilla CSS in `public/assets/site.css` using a system font stack so the four navigation links stay visible at 375 px without horizontal page scrolling
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
@@ -52,8 +52,8 @@
 
 ### Implementation for User Story 1
 
-- [ ] T008 [US1] Render the home page in `src/pages.php` with title "Home - GIT 2025 Responsible Gem & Jewelry Supply Chain", `<h1>` "GIT 2025", separate lines for the theme, dates, and place, the three verbatim paragraphs, and body links "Registration Fee" and "Program"
-- [ ] T009 [US1] Map GET `/` to the home page in `public/index.php`
+- [x] T008 [US1] Render the home page in `src/pages.php` with title "Home - GIT 2025 Responsible Gem & Jewelry Supply Chain", `<h1>` "GIT 2025", separate lines for the theme, dates, and place, the three verbatim paragraphs, and body links "Registration Fee" and "Program"
+- [x] T009 [US1] Map GET `/` to the home page in `public/index.php`
 
 **Checkpoint**: User Story 1 should be fully functional and testable independently
 
@@ -67,8 +67,8 @@
 
 ### Implementation for User Story 2
 
-- [ ] T010 [US2] Render one section per Day and one table per day in `src/pages.php` from `src/records.php` (header cells Time, Title, Speaker, Affiliation, Room; session fields time, title, speaker, affiliation, and room shown unchanged, including empty strings)
-- [ ] T011 [US2] Map GET `/program` to the program page in `public/index.php`
+- [x] T010 [US2] Render one section per Day and one table per day in `src/pages.php` from `src/records.php` (header cells Time, Title, Speaker, Affiliation, Room; session fields time, title, speaker, affiliation, and room shown unchanged, including empty strings)
+- [x] T011 [US2] Map GET `/program` to the program page in `public/index.php`
 
 **Checkpoint**: User Stories 1 and 2 should both work independently
 
@@ -82,8 +82,8 @@
 
 ### Implementation for User Story 3
 
-- [ ] T012 [US3] Render one heading and table per Fee table in `src/pages.php` using `columns` as the header row and `rows` as the body, then the sentence "All fees include conference materials, lunches and coffee breaks on both days."
-- [ ] T013 [US3] Map GET `/registration-fee` to the fee page in `public/index.php`
+- [x] T012 [US3] Render one heading and table per Fee table in `src/pages.php` using `columns` as the header row and `rows` as the body, then the sentence "All fees include conference materials, lunches and coffee breaks on both days."
+- [x] T013 [US3] Map GET `/registration-fee` to the fee page in `public/index.php`
 
 **Checkpoint**: User Stories 1, 2, and 3 should work independently
 
@@ -97,9 +97,9 @@
 
 ### Implementation for User Story 4
 
-- [ ] T014 [US4] Implement validation and JSON-lines storage in `src/contact.php` (`group` exactly General, Registration, Abstract Submission, or Sponsorship; `subject`, `message`, `name`, and `email` required after trim; `email` has exactly one `@`, at least one character on each side, and a `.` after the `@`; `phone` optional, missing or whitespace-only stored as `""`, otherwise only digits, spaces, `+`, `-`, `(`, and `)`; store trimmed fields plus `submitted_at` as UTC ISO 8601 to the second with a Z suffix in `data/submissions.jsonl`)
-- [ ] T015 [US4] Render the contact form, `data-error` messages, organiser details, and `data-confirmation` block in `src/pages.php` (General selected on first view; raw values preserved on failure; form omitted on success)
-- [ ] T016 [US4] Map GET and POST `/contact` and GET `/contact/submissions.json` in `public/index.php` (`Content-Type: application/json`; empty store returns `[]`)
+- [x] T014 [US4] Implement validation and JSON-lines storage in `src/contact.php` (`group` exactly General, Registration, Abstract Submission, or Sponsorship; `subject`, `message`, `name`, and `email` required after trim; `email` has exactly one `@`, at least one character on each side, and a `.` after the `@`; `phone` optional, missing or whitespace-only stored as `""`, otherwise only digits, spaces, `+`, `-`, `(`, and `)`; store trimmed fields plus `submitted_at` as UTC ISO 8601 to the second with a Z suffix in `data/submissions.jsonl`)
+- [x] T015 [US4] Render the contact form, `data-error` messages, organiser details, and `data-confirmation` block in `src/pages.php` (General selected on first view; raw values preserved on failure; form omitted on success)
+- [x] T016 [US4] Map GET and POST `/contact` and GET `/contact/submissions.json` in `public/index.php` (`Content-Type: application/json`; empty store returns `[]`)
 
 **Checkpoint**: Contact submission and the submissions list work without changing Home, Program, or Fees
 
@@ -113,7 +113,7 @@
 
 ### Implementation for User Story 5
 
-- [ ] T017 [US5] Render the 404 and 405 pages in `src/pages.php` and dispatch them from `public/index.php` per `specs/001-gitcon-public-pages/contracts/http.md` (GET unknown path is 404; any other method on Home, Program, Registration Fee, or an unknown path is 405; methods other than GET or POST on `/contact` are 405; methods other than GET on `/contact/submissions.json` are 405)
+- [x] T017 [US5] Render the 404 and 405 pages in `src/pages.php` and dispatch them from `public/index.php` per `specs/001-gitcon-public-pages/contracts/http.md` (GET unknown path is 404; any other method on Home, Program, Registration Fee, or an unknown path is 405; methods other than GET or POST on `/contact` are 405; methods other than GET on `/contact/submissions.json` are 405)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -123,8 +123,8 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T018 Confirm the `Dockerfile` enables `mod_rewrite` to `public/index.php` and makes `data/` writable by the web server
-- [ ] T019 Run the curl checks in `specs/001-gitcon-public-pages/quickstart.md`
+- [x] T018 Confirm the `Dockerfile` enables `mod_rewrite` to `public/index.php` and makes `data/` writable by the web server
+- [x] T019 Run the curl checks in `specs/001-gitcon-public-pages/quickstart.md`
 
 ---
 

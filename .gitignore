@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+*.log
+.env*
+data/submissions.jsonl
