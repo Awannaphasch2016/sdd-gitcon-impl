@@ -67,6 +67,9 @@ specs/001-gitcon-public-pages/
 Dockerfile                 # php:8.2-apache, document root public/, port 80
 public/
 ├── index.php              # Front controller and built-in-server router
+├── contact/
+│   ├── index.php          # Contact page when /contact is a directory
+│   └── submissions.json   # Published list, rewritten from the JSON-lines store; starts as []
 └── assets/
     └── site.css           # Vanilla CSS
 src/
@@ -79,7 +82,7 @@ data/
 └── fees.json              # Byte-for-byte SPEC.md §6.2
 ```
 
-**Structure Decision**: One PHP application with the document root at `public/` so fixtures and message storage stay outside the web root. Apache rewrites missing files to `public/index.php`. The same file is the router script for PHP's built-in server, which otherwise will not execute `/contact/submissions.json`.
+**Structure Decision**: One PHP application with the document root at `public/`. Fixtures and the JSON-lines store stay in `data/`. The submissions list is also published to `public/contact/submissions.json` so `php -S 127.0.0.1:8080 -t public` can return it. Apache rewrites other requests to `public/index.php` and sends non-GET requests for that list to the front controller.
 
 ## Complexity Tracking
 

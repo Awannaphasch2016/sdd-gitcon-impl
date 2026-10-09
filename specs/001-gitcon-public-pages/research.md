@@ -24,11 +24,11 @@
 - **Rationale**: SPEC.md requires the pages to change when the fixture changes, with a reload and no other edit.
 - **Alternatives considered**: Embedding the schedule in the template. Rejected because it fails the "nothing hardcoded" rule.
 
-## Decision: Front controller routing, including the built-in server router
+## Decision: Front controller, with a published submissions file for the built-in server
 
-- **Decision**: `public/index.php` chooses the page from the request path and method. Apache rewrites any non-file request to that script. For local `php -S`, the same script is passed as the router argument (`php -S 127.0.0.1:8080 -t public public/index.php`). The router returns `false` only for real files under `/assets/`.
-- **Rationale**: PHP's built-in server treats a URL that contains a dot as a static file. `/contact/submissions.json` never reaches `index.php` unless the script is the router. Docker's Apache rewrite does not have that limit. Trailing slashes are removed before matching, except that `/` stays `/`.
-- **Alternatives considered**: A physical `public/contact/submissions.json` file. Rejected because storage must be JSON lines or SQLite under `data/`, and a static file cannot apply method rules. A `public/contact/` directory with its own `index.php`. Rejected because it splits routing and still cannot execute a `.json` URL without a router.
+- **Decision**: `public/index.php` chooses the page from the request path and method. `public/contact/index.php` handles `/contact` when the built-in server maps that directory to its own index. Apache rewrites any non-file request to `public/index.php`. Each accepted message is appended to `data/submissions.jsonl` and the same list is rewritten to `public/contact/submissions.json`, which starts as `[]`. GET `/contact/submissions.json` therefore returns the list even when `php -S 127.0.0.1:8080 -t public` is started without a router script. Passing `public/index.php` as the router, and the Apache rule for non-GET, both send other methods on that URL to the front controller, which returns 405. The router returns `false` only for real files under `/assets/`. Trailing slashes are removed before matching, except that `/` stays `/`.
+- **Rationale**: PHP's built-in server treats a URL that contains a dot as a static file and will not run `index.php` for it. A directory named `contact` is also required so `/contact` still runs PHP. The JSON-lines file remains the stored record. The public JSON file is only the list the built-in server can return without a router. Apache still refuses non-GET on that URL.
+- **Alternatives considered**: Router script only (`php -S 127.0.0.1:8080 -t public public/index.php`). Rejected as the only local command because the verification command does not pass a router, so GET `/contact/submissions.json` would be the server's own 404. SQLite. Rejected as extra machinery for one append-only list.
 
 ## Decision: Server-side validation and escaped text
 

@@ -9,7 +9,13 @@ Confirms the public pages against [contracts/http.md](./contracts/http.md) and [
 
 ## Local server
 
-PHP's built-in server only runs the front controller for `/contact/submissions.json` when that file is the router script. From the repository root:
+From the repository root:
+
+```bash
+php -S 127.0.0.1:8080 -t public
+```
+
+That command serves the HTML pages and `GET /contact/submissions.json` (the published list). To exercise the front controller for every URL, including method checks on the submissions list, pass the router script as well:
 
 ```bash
 php -S 127.0.0.1:8080 -t public public/index.php
