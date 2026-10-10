@@ -4,11 +4,18 @@ RUN a2enmod rewrite \
     && printf '%s\n' \
         '<VirtualHost *:80>' \
         '    DocumentRoot /var/www/app/public' \
+        '    RewriteEngine On' \
+        '    # /contact is a directory, so mod_dir 301s it to /contact/ before' \
+        '    # per-directory rewrites. That drops the POST body. Route it here,' \
+        '    # in the URL translation phase, so the contact handler still runs.' \
+        '    RewriteRule ^/contact$ /index.php [END]' \
         '    <Directory /var/www/app/public>' \
         '        AllowOverride None' \
         '        Require all granted' \
         '        DirectoryIndex index.php' \
         '        RewriteEngine On' \
+        '        RewriteOptions AllowNoSlash' \
+        '        RewriteRule ^contact$ /index.php [END]' \
         '        RewriteCond %{REQUEST_METHOD} !=GET' \
         '        RewriteRule ^contact/submissions\.json$ /index.php [L]' \
         '        RewriteRule ^contact/submissions\.json/$ /contact/submissions.json [L]' \
