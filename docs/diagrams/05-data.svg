@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="860" viewBox="0 0 1180 860">
+  <rect width="100%" height="100%" fill="#f7f3ea"/>
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1b3a32">5. Data diagram</text>
+  <text x="32" y="66" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#5c5146">The three records the site keeps, and how they relate.</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#241c14"/>
+    </marker>
+    <marker id="arrow-r" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#8a2e24"/>
+    </marker>
+  </defs>
+
+<rect x="32" y="110" width="360" height="300" rx="10" fill="#e7f0ea" stroke="#1b3a32" stroke-width="2"/>
+<text x="48" y="138" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Program  ·  data/program.json</text>
+<text x="48" y="162" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">One file. Read on every /program.</text>
+<text x="48" y="180" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="48" y="198" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">days[]  in file order</text>
+<text x="48" y="216" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">  id</text>
+<text x="48" y="234" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">  title</text>
+<text x="48" y="252" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">  sessions[]  in file order</text>
+<text x="48" y="270" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">    time</text>
+<text x="48" y="288" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">    title</text>
+<text x="48" y="306" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">    speaker</text>
+<text x="48" y="324" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">    affiliation</text>
+<text x="48" y="342" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">    room</text>
+<text x="48" y="360" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="48" y="378" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Any session field may be empty.</text>
+<rect x="420" y="110" width="360" height="300" rx="10" fill="#e7f0ea" stroke="#1b3a32" stroke-width="2"/>
+<text x="436" y="138" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Fees  ·  data/fees.json</text>
+<text x="436" y="162" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">One file. Read on every fee page.</text>
+<text x="436" y="180" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="436" y="198" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">columns[]   header cells</text>
+<text x="436" y="216" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">tables[]    in file order</text>
+<text x="436" y="234" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">  title</text>
+<text x="436" y="252" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">  rows[][]  cells, unchanged</text>
+<text x="436" y="270" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="436" y="288" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Both tables share the same</text>
+<text x="436" y="306" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">column headings.</text>
+<rect x="808" y="110" width="340" height="300" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="824" y="138" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Contact message</text>
+<text x="824" y="162" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">One JSON object per line in</text>
+<text x="824" y="180" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">data/submissions.jsonl</text>
+<text x="824" y="198" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="824" y="216" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">group</text>
+<text x="824" y="234" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">subject</text>
+<text x="824" y="252" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">message</text>
+<text x="824" y="270" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">name</text>
+<text x="824" y="288" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">email</text>
+<text x="824" y="306" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">phone</text>
+<text x="824" y="324" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">submitted_at</text>
+<rect x="32" y="450" width="748" height="200" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="48" y="478" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Published list  ·  public/contact/submissions.json</text>
+<text x="48" y="502" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">A JSON array of the contact messages, oldest first.</text>
+<text x="48" y="520" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Rewritten from submissions.jsonl after each accepted message.</text>
+<text x="48" y="538" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Before any message, the file is [].</text>
+<text x="48" y="556" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">This is a copy for the web server. The line file is the store.</text>
+<rect x="808" y="450" width="340" height="200" rx="10" fill="#efe4d2" stroke="#1b3a32" stroke-width="2"/>
+<text x="824" y="478" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Rules worth remembering</text>
+<text x="824" y="502" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Program does not point at fees.</text>
+<text x="824" y="520" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Fees do not point at messages.</text>
+<text x="824" y="538" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">A message does not point at a day.</text>
+<text x="824" y="556" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Messages last for this copy of</text>
+<text x="824" y="574" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">the site only.</text>
+<text x="32" y="700" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#241c14">group is one of: General, Registration, Abstract Submission, Sponsorship.</text>
+<text x="32" y="724" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#241c14">subject, message, name, and email are required after trimming. phone may be an empty string.</text>
+<text x="32" y="748" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="400" fill="#241c14">submitted_at is set by the server in UTC, to the second, with a Z suffix. Example: 2026-10-09T23:39:33Z.</text>
+<text x="32" y="790" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1b3a32">There is no database. Changing program.json or fees.json and reloading the page changes what visitors see.</text>
+</svg>

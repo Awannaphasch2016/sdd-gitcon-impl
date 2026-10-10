@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760">
+  <rect width="100%" height="100%" fill="#f7f3ea"/>
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1b3a32">2. Container diagram</text>
+  <text x="32" y="66" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#5c5146">Where the code lives, and what is separated from what.</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#241c14"/>
+    </marker>
+    <marker id="arrow-r" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#8a2e24"/>
+    </marker>
+  </defs>
+
+<rect x="36" y="250" width="220" height="160" rx="10" fill="#1b3a32" stroke="#1b3a32" stroke-width="2"/>
+<text x="52" y="278" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#f6f1e6">Browser</text>
+<text x="52" y="302" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Shows the HTML pages.</text>
+<text x="52" y="320" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Loads /assets/site.css.</text>
+<text x="52" y="338" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Posts the contact form.</text>
+<text x="52" y="356" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">No separate frontend app.</text>
+<rect x="310" y="110" width="830" height="600" rx="14" fill="#efe4d2" stroke="#1b3a32" stroke-width="2.4"/>
+<text x="330" y="144" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#1b3a32">One container: php:8.2-apache</text>
+<text x="330" y="168" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#3d3428">Docker image. HTTP on port 80. No network after it starts.</text>
+<rect x="340" y="190" width="770" height="90" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="356" y="218" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">Apache</text>
+<text x="356" y="242" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Document root is /var/www/app/public.</text>
+<text x="356" y="260" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Sends page requests to public/index.php. Serves real files, including CSS, as files.</text>
+<rect x="340" y="310" width="240" height="250" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="356" y="338" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">public/</text>
+<text x="356" y="362" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Web root. Apache can</text>
+<text x="356" y="380" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">read this folder.</text>
+<text x="356" y="398" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="356" y="416" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">index.php  router</text>
+<text x="356" y="434" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">contact/index.php</text>
+<text x="356" y="452" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">contact/submissions.json</text>
+<text x="356" y="470" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">assets/site.css</text>
+<rect x="600" y="310" width="240" height="250" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="616" y="338" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">src/</text>
+<text x="616" y="362" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Application code.</text>
+<text x="616" y="380" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Not the web root.</text>
+<text x="616" y="398" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="616" y="416" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">bootstrap.php</text>
+<text x="616" y="434" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">pages.php</text>
+<text x="616" y="452" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">records.php</text>
+<text x="616" y="470" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">contact.php</text>
+<rect x="860" y="310" width="240" height="250" rx="10" fill="#e7f0ea" stroke="#1b3a32" stroke-width="2"/>
+<text x="876" y="338" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">data/</text>
+<text x="876" y="362" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Files on disk.</text>
+<text x="876" y="380" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Not a database server.</text>
+<text x="876" y="398" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14"></text>
+<text x="876" y="416" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">program.json</text>
+<text x="876" y="434" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">fees.json</text>
+<text x="876" y="452" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">submissions.jsonl</text>
+<text x="876" y="470" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">(created on first send)</text>
+<text x="340" y="590" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#3d3428">Inside the image these folders are /var/www/app/public, /var/www/app/src, and /var/www/app/data.</text>
+<text x="340" y="614" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#3d3428">Locally they are the public, src, and data folders at the repository root.</text>
+<text x="340" y="648" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#3d3428">public/contact/submissions.json is a copy of the message list so a plain PHP server can return it.</text>
+<line x1="256" y1="320" x2="340" y2="230" stroke="#241c14" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="300" y="250" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3d3428">port 80</text>
+</svg>

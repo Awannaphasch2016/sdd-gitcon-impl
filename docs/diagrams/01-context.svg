@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="640" viewBox="0 0 1180 640">
+  <rect width="100%" height="100%" fill="#f7f3ea"/>
+  <text x="32" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#1b3a32">1. Context diagram</text>
+  <text x="32" y="66" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#5c5146">Who uses the site, and which outside services it needs.</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#241c14"/>
+    </marker>
+    <marker id="arrow-r" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#8a2e24"/>
+    </marker>
+  </defs>
+
+<rect x="48" y="120" width="250" height="130" rx="10" fill="#1b3a32" stroke="#1b3a32" stroke-width="2"/>
+<text x="64" y="148" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#f6f1e6">Visitor</text>
+<text x="64" y="172" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Person using a browser.</text>
+<text x="64" y="190" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Opens the four public pages.</text>
+<text x="64" y="208" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Submits the contact form.</text>
+<rect x="48" y="390" width="250" height="130" rx="10" fill="#1b3a32" stroke="#1b3a32" stroke-width="2"/>
+<text x="64" y="418" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#f6f1e6">Staff reader</text>
+<text x="64" y="442" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Person who checks messages.</text>
+<text x="64" y="460" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Opens the submissions list.</text>
+<text x="64" y="478" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#f6f1e6">Uses the same website.</text>
+<rect x="430" y="210" width="340" height="200" rx="10" fill="#fffaf3" stroke="#1b3a32" stroke-width="2"/>
+<text x="446" y="238" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#1b3a32">GIT 2025 website</text>
+<text x="446" y="262" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">This project.</text>
+<text x="446" y="280" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Serves HTML pages and one JSON list.</text>
+<text x="446" y="298" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Keeps messages in files on its own disk.</text>
+<text x="446" y="316" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Runs inside one PHP container.</text>
+<text x="446" y="334" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#241c14">Does not call out to anything else.</text>
+<line x1="298" y1="185" x2="430" y2="270" stroke="#241c14" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="364" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3d3428">HTTP</text>
+<line x1="298" y1="430" x2="430" y2="350" stroke="#241c14" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="350" y="410" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3d3428">HTTP GET</text>
+<rect x="820" y="120" width="320" height="400" rx="10" fill="#f8ebe8" stroke="#8a2e24" stroke-width="2"/>
+<text x="836" y="152" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="16" font-weight="700" fill="#8a2e24">Not connected</text>
+<text x="836" y="184" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No database server</text>
+<text x="836" y="202" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No mail server</text>
+<text x="836" y="220" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No CAPTCHA service</text>
+<text x="836" y="238" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No analytics service</text>
+<text x="836" y="256" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No CDN or external fonts</text>
+<text x="836" y="274" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">No login provider</text>
+<text x="836" y="292" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c"></text>
+<text x="836" y="310" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">The only runtime connection</text>
+<text x="836" y="328" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">is the visitor's browser</text>
+<text x="836" y="346" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">talking to this website.</text>
+<text x="836" y="364" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c"></text>
+<text x="836" y="382" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">Docker pulls the PHP image</text>
+<text x="836" y="400" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">when the image is built,</text>
+<text x="836" y="418" text-anchor="start" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#5c332c">not while the site is serving.</text>
+<line x1="770" y1="310" x2="820" y2="310" stroke="#8a2e24" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#arrow-r)"/>
+<text x="795" y="300" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3d3428">none</text>
+</svg>
