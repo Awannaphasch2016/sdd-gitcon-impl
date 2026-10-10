@@ -1,0 +1,9 @@
+.git
+.specify
+specs
+*.md
+.gitignore
+.dockerignore
+data/submissions.jsonl
+*.log
+.env*
